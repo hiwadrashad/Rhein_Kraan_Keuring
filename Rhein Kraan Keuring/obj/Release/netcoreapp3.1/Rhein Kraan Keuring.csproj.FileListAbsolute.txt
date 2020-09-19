@@ -15,3 +15,5 @@ C:\Users\itv-admin\source\repos\Rhein Kraan Keuring\Rhein Kraan Keuring\obj\Rele
 C:\Users\itv-admin\source\repos\Rhein Kraan Keuring\Rhein Kraan Keuring\obj\Release\netcoreapp3.1\Rhein Kraan Keuring.AssemblyInfo.cs
 C:\Users\itv-admin\source\repos\Rhein Kraan Keuring\Rhein Kraan Keuring\obj\Release\netcoreapp3.1\Rhein Kraan Keuring.dll
 C:\Users\itv-admin\source\repos\Rhein Kraan Keuring\Rhein Kraan Keuring\obj\Release\netcoreapp3.1\Rhein Kraan Keuring.pdb
+C:\Users\itv-admin\source\repos\Rhein Kraan Keuring\Rhein Kraan Keuring\obj\Release\netcoreapp3.1\Rhein Kraan Keuring.csproj.CoreCompileInputs.cache
+C:\Users\itv-admin\source\repos\Rhein Kraan Keuring\Rhein Kraan Keuring\obj\Release\netcoreapp3.1\Rhein Kraan Keuring.genruntimeconfig.cache

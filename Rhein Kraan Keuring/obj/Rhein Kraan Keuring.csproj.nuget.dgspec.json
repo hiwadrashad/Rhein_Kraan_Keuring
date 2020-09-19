@@ -30,7 +30,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\itv-admin\\source\\repos\\Rhein Kraan Keuring\\RheinKraanKeuringLibrary\\RheinKraanKeuringLibrary.csproj": {
+                "projectPath": "C:\\Users\\itv-admin\\source\\repos\\Rhein Kraan Keuring\\RheinKraanKeuringLibrary\\RheinKraanKeuringLibrary.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -61,6 +65,17 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\itv-admin\\source\\repos\\Rhein Kraan Keuring\\RheinKraanKeuringLibrary\\RheinKraanKeuringLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\itv-admin\\source\\repos\\Rhein Kraan Keuring\\RheinKraanKeuringLibrary\\RheinKraanKeuringLibrary.csproj",
+        "projectName": "RheinKraanKeuringLibrary",
+        "projectPath": "C:\\Users\\itv-admin\\source\\repos\\Rhein Kraan Keuring\\RheinKraanKeuringLibrary\\RheinKraanKeuringLibrary.csproj"
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

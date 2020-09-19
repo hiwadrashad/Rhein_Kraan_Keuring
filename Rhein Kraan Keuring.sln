@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhein Kraan Keuring", "Rhein Kraan Keuring\Rhein Kraan Keuring.csproj", "{06344E9E-51E3-495E-9E1B-3C80F26560A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rhein Kraan Keuring", "Rhein Kraan Keuring\Rhein Kraan Keuring.csproj", "{06344E9E-51E3-495E-9E1B-3C80F26560A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RheinKraanKeuringLibrary", "RheinKraanKeuringLibrary\RheinKraanKeuringLibrary.csproj", "{D9441713-8D56-4D58-9480-589E7053AFC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{06344E9E-51E3-495E-9E1B-3C80F26560A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06344E9E-51E3-495E-9E1B-3C80F26560A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06344E9E-51E3-495E-9E1B-3C80F26560A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9441713-8D56-4D58-9480-589E7053AFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9441713-8D56-4D58-9480-589E7053AFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9441713-8D56-4D58-9480-589E7053AFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9441713-8D56-4D58-9480-589E7053AFC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="logo.png" />
+    <ProjectReference Include="..\RheinKraanKeuringLibrary\RheinKraanKeuringLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
   </ItemGroup>
 
 </Project>

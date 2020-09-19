@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using RheinKraanKeuringLibrary;
 
 
 
@@ -26,28 +27,9 @@ namespace Rhein_Kraan_Keuring
     
     public partial class MainWindow : Window
     {
-       
-        int opdrachtnummer = 0;
-        int maximumgecreerde = 0;
-        Dictionary<int, List<string>> lengte6dlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> lengte30dlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> IDlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> afslijpinglist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> roestlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> diameterlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> positielist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> beoordelinglist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> typelist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> typeroestlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> kabelleverancierlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> waarnemingenlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> bedrijfsurenelist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> redenenlist = new Dictionary<int, List<string>>();
-        Dictionary<int, List<string>> datelist = new Dictionary<int, List<string>>();
-        Dictionary<int, string> imagepath = new Dictionary<int, string>();
-
         public MainWindow()
         {
+            Initialize.InitializeModel();
             InitializeComponent();
         }
 
@@ -83,7 +65,9 @@ namespace Rhein_Kraan_Keuring
                     
                 }
             }
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception exception)
+#pragma warning restore CS0168 // Variable is declared but never used
             {
                 System.Windows.Forms.MessageBox.Show("foutmelding", "fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
             };
@@ -98,11 +82,24 @@ namespace Rhein_Kraan_Keuring
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            if (opdrachtnummer > 0)
+            if (Model.opdrachtnummer > 0)
             {
-
-               
-                lengte6dlist[opdrachtnummer] = new List<string> { lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text };
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
                 lengte30dlist[opdrachtnummer] = new List<string> { lenget30d1.Text, lenget30d2.Text, lenget30d3.Text, lenget30d4.Text, lenget30d5.Text };
                 IDlist[opdrachtnummer] = new List<string> { id1.Text, id2.Text, id3.Text, id4.Text, id5.Text };
                 afslijpinglist[opdrachtnummer] = new List<string> { afslijping1.Text, afslijping2.Text, afslijping3.Text, afslijping4.Text, afslijping5.Text };
@@ -116,8 +113,8 @@ namespace Rhein_Kraan_Keuring
                 waarnemingenlist[opdrachtnummer] = new List<string> { waarnemingen1.Text};
                 bedrijfsurenelist[opdrachtnummer] = new List<string> { bedrijfsuren1.Text};
                 redenenlist[opdrachtnummer] = new List<string> { redenen1.Text};
-                datelist[opdrachtnummer] = new List<string> { Convert.ToString(label3.Content) };
-                imagepath[opdrachtnummer] = Convert.ToString(filepath.Content);
+                Model.datelist[opdrachtnummer] = new List<string> { Convert.ToString(label3.Content) };
+                Model.imagepath[opdrachtnummer] = Convert.ToString(filepath.Content);
 
                 opdrachtnummer = opdrachtnummer - 1;
                 nummer.Content = Convert.ToString(opdrachtnummer);
@@ -437,7 +434,7 @@ namespace Rhein_Kraan_Keuring
                     src.UriSource = new Uri(imageobj2, UriKind.Absolute);
                     src.EndInit();
                     image1.Source = src;
-                    filepath.Content = imageobj2
+                    filepath.Content = imageobj2;
                 }
 
             }
@@ -454,7 +451,9 @@ namespace Rhein_Kraan_Keuring
             {
                 savedate = datum1.SelectedDate.Value.Date.ToShortDateString().ToString();
             }
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (InvalidOperationException exception)
+#pragma warning restore CS0168 // Variable is declared but never used
             {
                 savedate = "";
             }
