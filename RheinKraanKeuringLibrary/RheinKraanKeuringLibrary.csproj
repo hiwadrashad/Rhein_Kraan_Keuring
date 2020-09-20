@@ -41,9 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Initialize.cs" />
     <Compile Include="Methods.cs" />
-    <Compile Include="Model.cs" />
+    <Compile Include="StaticModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

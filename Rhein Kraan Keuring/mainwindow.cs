@@ -27,27 +27,23 @@ namespace Rhein_Kraan_Keuring
     
     public partial class MainWindow : Window
     {
+        // initalize
         public MainWindow()
         {
-            Initialize.InitializeModel();
+            Methods.InitializeModel();
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-  
-            
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Exit_Applcation(object sender, RoutedEventArgs e)
         {
            System.Windows.Application.Current.Shutdown();
             
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+       
+        private void Upload_Image(object sender, RoutedEventArgs e)
         {
+
             try
             {
                 OpenFileDialog ofd = new OpenFileDialog();
@@ -75,142 +71,108 @@ namespace Rhein_Kraan_Keuring
 
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Previous_Clicked(object sender, RoutedEventArgs e)
         {
-            if (Model.opdrachtnummer > 0)
+            if (StaticModel.opdrachtnummer > 0)
             {
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                Methods.StoreValues(Model.lengte6dlist, Model.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
-                lengte30dlist[opdrachtnummer] = new List<string> { lenget30d1.Text, lenget30d2.Text, lenget30d3.Text, lenget30d4.Text, lenget30d5.Text };
-                IDlist[opdrachtnummer] = new List<string> { id1.Text, id2.Text, id3.Text, id4.Text, id5.Text };
-                afslijpinglist[opdrachtnummer] = new List<string> { afslijping1.Text, afslijping2.Text, afslijping3.Text, afslijping4.Text, afslijping5.Text };
-                roestlist[opdrachtnummer] = new List<string> { corrosie1.Text, corrosie2.Text, corrosie3.Text, corrosie4.Text, corrosie5.Text };
-                diameterlist[opdrachtnummer] = new List<string> { diameter2.Text, diameter3.Text, diameter3.Text, diameter4.Text, diameter5.Text };
-                positielist[opdrachtnummer] = new List<string> { positie1.Text, positie2.Text, positie3.Text, positie4.Text, positie5.Text };
-                beoordelinglist[opdrachtnummer] = new List<string> { totaal1.Text, totaal2.Text, totaal3.Text, totaal4.Text, totaal5.Text };
-                typelist[opdrachtnummer] = new List<string> { beschadiging1.Text, beschadiging2.Text, beschadiging3.Text, beschadiging4.Text, beschadiging5.Text };
-                typeroestlist[opdrachtnummer] = new List<string> { roest1.Text, roest2.Text, roest3.Text, roest4.Text, roest5.Text };
-                kabelleverancierlist[opdrachtnummer] = new List<string> { kabelleverancier1.Text};
-                waarnemingenlist[opdrachtnummer] = new List<string> { waarnemingen1.Text};
-                bedrijfsurenelist[opdrachtnummer] = new List<string> { bedrijfsuren1.Text};
-                redenenlist[opdrachtnummer] = new List<string> { redenen1.Text};
-                Model.datelist[opdrachtnummer] = new List<string> { Convert.ToString(label3.Content) };
-                Model.imagepath[opdrachtnummer] = Convert.ToString(filepath.Content);
+                Methods.StoreValues(StaticModel.lengte6dlist, StaticModel.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+                Methods.StoreValues(StaticModel.lengte30dlist, StaticModel.opdrachtnummer, lenget30d1.Text, lenget30d2.Text, lenget30d3.Text, lenget30d4.Text, lenget30d5.Text);
+                Methods.StoreValues(StaticModel.IDlist, StaticModel.opdrachtnummer, id1.Text, id2.Text, id3.Text, id4.Text, id5.Text);
+                Methods.StoreValues(StaticModel.afslijpinglist, StaticModel.opdrachtnummer, afslijping1.Text, afslijping2.Text, afslijping3.Text, afslijping4.Text, afslijping5.Text);
+                Methods.StoreValues(StaticModel.roestlist, StaticModel.opdrachtnummer, corrosie1.Text, corrosie2.Text, corrosie3.Text, corrosie4.Text, corrosie5.Text);
+                Methods.StoreValues(StaticModel.diameterlist, StaticModel.opdrachtnummer, diameter2.Text, diameter3.Text, diameter3.Text, diameter4.Text, diameter5.Text);
+                Methods.StoreValues(StaticModel.positielist, StaticModel.opdrachtnummer, positie1.Text, positie2.Text, positie3.Text, positie4.Text, positie5.Text);
+                Methods.StoreValues(StaticModel.beoordelinglist, StaticModel.opdrachtnummer, totaal1.Text, totaal2.Text, totaal3.Text, totaal4.Text, totaal5.Text);
+                Methods.StoreValues(StaticModel.typelist, StaticModel.opdrachtnummer, beschadiging1.Text, beschadiging2.Text, beschadiging3.Text, beschadiging4.Text, beschadiging5.Text);
+                Methods.StoreValues(StaticModel.typeroestlist, StaticModel.opdrachtnummer, roest1.Text, roest2.Text, roest3.Text, roest4.Text, roest5.Text);
+                Methods.StoreValues(StaticModel.kabelleverancierlist, StaticModel.opdrachtnummer, kabelleverancier1.Text);
+                Methods.StoreValues(StaticModel.waarnemingenlist, StaticModel.opdrachtnummer, waarnemingen1.Text);
+                Methods.StoreValues(StaticModel.bedrijfsurenelist, StaticModel.opdrachtnummer, bedrijfsuren1.Text);
+                Methods.StoreValues(StaticModel.redenenlist, StaticModel.opdrachtnummer, redenen1.Text);
+                Methods.StoreValues(StaticModel.datelist, StaticModel.opdrachtnummer, Convert.ToString(label3.Content));
+                Methods.StoreValues(StaticModel.imagepath, StaticModel.opdrachtnummer, Convert.ToString(filepath.Content));
 
-                opdrachtnummer = opdrachtnummer - 1;
-                nummer.Content = Convert.ToString(opdrachtnummer);
+                StaticModel.opdrachtnummer = StaticModel.opdrachtnummer - 1;
+                nummer.Content = Convert.ToString(StaticModel.opdrachtnummer);
 
-                var lengte = lengte6dlist[opdrachtnummer];
-                var lengte30 = lengte30dlist[opdrachtnummer];
-                var Id = IDlist[opdrachtnummer];
-                var afslijping = afslijpinglist[opdrachtnummer];
-                var roest = roestlist[opdrachtnummer];
-                var diameter = diameterlist[opdrachtnummer];
-                var positie = positielist[opdrachtnummer];
-                var beoordeling = beoordelinglist[opdrachtnummer];
-                var type = typelist[opdrachtnummer];
-                var typeroest = typeroestlist[opdrachtnummer];
-                var leverancier = kabelleverancierlist[opdrachtnummer];
-                var waarnemingen = waarnemingenlist[opdrachtnummer];
-                var uren = bedrijfsurenelist[opdrachtnummer];
-                var reden = redenenlist[opdrachtnummer];
-                var datum = datelist[opdrachtnummer];
-                var imageobj = imagepath[opdrachtnummer];
-
-                lenget6d1.Text = lengte[0];
-                lenget6d2.Text = lengte[1];
-                lenget6d3.Text = lengte[2];
-                lenget6d4.Text = lengte[3];
-                lenget6d5.Text = lengte[4];
+                Methods.AssignListInsideList(StaticModel.opdrachtnummer);
+                
+                lenget6d1.Text = ExtractedModel.lengte[0]; 
+                lenget6d2.Text = ExtractedModel.lengte[1];
+                lenget6d3.Text = ExtractedModel.lengte[2];
+                lenget6d4.Text = ExtractedModel.lengte[3];
+                lenget6d5.Text = ExtractedModel.lengte[4];
 
                 //lengte30d
-                lenget30d1.Text = lengte30[0];
-                lenget30d2.Text = lengte30[1];
-                lenget30d3.Text = lengte30[2];
-                lenget30d4.Text = lengte30[3];
-                lenget30d5.Text = lengte30[4];
+                lenget30d1.Text = ExtractedModel.lengte30[0];
+                lenget30d2.Text = ExtractedModel.lengte30[1];
+                lenget30d3.Text = ExtractedModel.lengte30[2];
+                lenget30d4.Text = ExtractedModel.lengte30[3];
+                lenget30d5.Text = ExtractedModel.lengte30[4];
 
                 //id
-                id1.Text = Id[0];
-                id2.Text = Id[1];
-                id3.Text = Id[2];
-                id4.Text = Id[3];
-                id5.Text = Id[4];
+                id1.Text = ExtractedModel.Id[0];
+                id2.Text = ExtractedModel.Id[1];
+                id3.Text = ExtractedModel.Id[2];
+                id4.Text = ExtractedModel.Id[3];
+                id5.Text = ExtractedModel.Id[4];
                 //aflsijping
-                afslijping1.Text = afslijping[0];
-                afslijping2.Text = afslijping[1];
-                afslijping3.Text = afslijping[2];
-                afslijping4.Text = afslijping[3];
-                afslijping5.Text = afslijping[4];
+                afslijping1.Text = ExtractedModel.afslijping[0];
+                afslijping2.Text = ExtractedModel.afslijping[1];
+                afslijping3.Text = ExtractedModel.afslijping[2];
+                afslijping4.Text = ExtractedModel.afslijping[3];
+                afslijping5.Text = ExtractedModel.afslijping[4];
                 //corrosie
-                corrosie1.Text = roest[0];
-                corrosie2.Text = roest[1];
-                corrosie3.Text = roest[2];
-                corrosie4.Text = roest[3];
-                corrosie5.Text = roest[4];
+                corrosie1.Text = ExtractedModel.roest[0];
+                corrosie2.Text = ExtractedModel.roest[1];
+                corrosie3.Text = ExtractedModel.roest[2];
+                corrosie4.Text = ExtractedModel.roest[3];
+                corrosie5.Text = ExtractedModel.roest[4];
                 //diameter
-                diameter1.Text = diameter[0];
-                diameter2.Text = diameter[1];
-                diameter3.Text = diameter[2];
-                diameter4.Text = diameter[3];
-                diameter5.Text = diameter[4];
+                diameter1.Text = ExtractedModel.diameter[0];
+                diameter2.Text = ExtractedModel.diameter[1];
+                diameter3.Text = ExtractedModel.diameter[2];
+                diameter4.Text = ExtractedModel.diameter[3];
+                diameter5.Text = ExtractedModel.diameter[4];
                 //positie
-                positie1.Text = positie[0];
-                positie2.Text = positie[1];
-                positie3.Text = positie[2];
-                positie4.Text = positie[3];
-                positie5.Text = positie[4];
+                positie1.Text = ExtractedModel.positie[0];
+                positie2.Text = ExtractedModel.positie[1];
+                positie3.Text = ExtractedModel.positie[2];
+                positie4.Text = ExtractedModel.positie[3];
+                positie5.Text = ExtractedModel.positie[4];
                 //totaal
-                totaal1.Text = beoordeling[0];
-                totaal2.Text = beoordeling[1];
-                totaal3.Text = beoordeling[2];
-                totaal4.Text = beoordeling[3];
-                totaal5.Text = beoordeling[4];
+                totaal1.Text = ExtractedModel.beoordeling[0];
+                totaal2.Text = ExtractedModel.beoordeling[1];
+                totaal3.Text = ExtractedModel.beoordeling[2];
+                totaal4.Text = ExtractedModel.beoordeling[3];
+                totaal5.Text = ExtractedModel.beoordeling[4];
                 //beschadiging
-                beschadiging1.Text = type[0];
-                beschadiging2.Text = type[1];
-                beschadiging3.Text = type[2];
-                beschadiging4.Text = type[3];
-                beschadiging5.Text = type[4];
+                beschadiging1.Text = ExtractedModel.type[0];
+                beschadiging2.Text = ExtractedModel.type[1];
+                beschadiging3.Text = ExtractedModel.type[2];
+                beschadiging4.Text = ExtractedModel.type[3];
+                beschadiging5.Text = ExtractedModel.type[4];
                 //roest
-                roest1.Text = typeroest[0];
-                roest2.Text = typeroest[1];
-                roest3.Text = typeroest[2];
-                roest4.Text = typeroest[3];
-                roest5.Text = typeroest[4];
+                roest1.Text = ExtractedModel.typeroest[0];
+                roest2.Text = ExtractedModel.typeroest[1];
+                roest3.Text = ExtractedModel.typeroest[2];
+                roest4.Text = ExtractedModel.typeroest[3];
+                roest5.Text = ExtractedModel.typeroest[4];
                 //datum*
                 //kabelleverancier
-                kabelleverancier1.Text = leverancier[0];
+                kabelleverancier1.Text = ExtractedModel.leverancier[0];
                 //waarnemingen
-                waarnemingen1.Text = waarnemingen[0];
+                waarnemingen1.Text = ExtractedModel.waarnemingen[0];
                 //handtekening*
                 //bedrijfsuren
-                bedrijfsuren1.Text = uren[0];
+                bedrijfsuren1.Text = ExtractedModel.uren[0];
                 //redenen
-                redenen1.Text = reden[0];
+                redenen1.Text = ExtractedModel.reden[0];
                 //datum
-                label3.Content = datum[0];
+                label3.Content = ExtractedModel.datum[0];
                 //image
-                if (imageobj == "")
+                if (ExtractedModel.imageobj == "")
                 {
                     image1.Source = null;
                     filepath.Content = "";
@@ -219,44 +181,42 @@ namespace Rhein_Kraan_Keuring
                 {
                     BitmapImage src = new BitmapImage();
                     src.BeginInit();
-                    src.UriSource = new Uri(imageobj, UriKind.Absolute);
+                    src.UriSource = new Uri(ExtractedModel.imageobj, UriKind.Absolute);
                     src.EndInit();
                     image1.Source = src;
-                    filepath.Content = imageobj;
+                    filepath.Content = ExtractedModel.imageobj;
                 }
 
             }
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void Next_Clicked(object sender, RoutedEventArgs e)
         {
-
-          
-
-            lengte6dlist[opdrachtnummer] = new List<string> { lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text };
-            lengte30dlist[opdrachtnummer] = new List<string> { lenget30d1.Text, lenget30d2.Text, lenget30d3.Text, lenget30d4.Text, lenget30d5.Text };
-            IDlist[opdrachtnummer] = new List<string> { id1.Text, id2.Text, id3.Text, id4.Text, id5.Text };
-            afslijpinglist[opdrachtnummer] = new List<string> { afslijping1.Text, afslijping2.Text, afslijping3.Text, afslijping4.Text, afslijping5.Text };
-            roestlist[opdrachtnummer] = new List<string> { corrosie1.Text, corrosie2.Text, corrosie3.Text, corrosie4.Text, corrosie5.Text };
-            diameterlist[opdrachtnummer] = new List<string> { diameter2.Text, diameter3.Text, diameter3.Text, diameter4.Text, diameter5.Text };
-            positielist[opdrachtnummer] = new List<string> { positie1.Text, positie2.Text, positie3.Text, positie4.Text, positie5.Text };
-            beoordelinglist[opdrachtnummer] = new List<string> { totaal1.Text, totaal2.Text, totaal3.Text, totaal4.Text, totaal5.Text };
-            typelist[opdrachtnummer] = new List<string> { beschadiging1.Text, beschadiging2.Text, beschadiging3.Text, beschadiging4.Text, beschadiging5.Text };
-            typeroestlist[opdrachtnummer] = new List<string> { roest1.Text, roest2.Text, roest3.Text, roest4.Text, roest5.Text };
-            kabelleverancierlist[opdrachtnummer] = new List<string> { kabelleverancier1.Text };
-            waarnemingenlist[opdrachtnummer] = new List<string> { waarnemingen1.Text };
-            bedrijfsurenelist[opdrachtnummer] = new List<string> { bedrijfsuren1.Text };
-            redenenlist[opdrachtnummer] = new List<string> { redenen1.Text };
-            datelist[opdrachtnummer] = new List<string> { Convert.ToString(label3.Content)};
-            imagepath[opdrachtnummer] = Convert.ToString(filepath.Content);
+            Methods.StoreValues(StaticModel.lengte6dlist, StaticModel.opdrachtnummer, lenget6d1.Text, lenget6d2.Text, lenget6d3.Text, lenget6d4.Text, lenget6d5.Text);
+            Methods.StoreValues(StaticModel.lengte30dlist, StaticModel.opdrachtnummer, lenget30d1.Text, lenget30d2.Text, lenget30d3.Text, lenget30d4.Text, lenget30d5.Text);
+            Methods.StoreValues(StaticModel.IDlist, StaticModel.opdrachtnummer, id1.Text, id2.Text, id3.Text, id4.Text, id5.Text);
+            Methods.StoreValues(StaticModel.afslijpinglist, StaticModel.opdrachtnummer, afslijping1.Text, afslijping2.Text, afslijping3.Text, afslijping4.Text, afslijping5.Text);
+            Methods.StoreValues(StaticModel.roestlist, StaticModel.opdrachtnummer, corrosie1.Text, corrosie2.Text, corrosie3.Text, corrosie4.Text, corrosie5.Text);
+            Methods.StoreValues(StaticModel.diameterlist, StaticModel.opdrachtnummer, diameter2.Text, diameter3.Text, diameter3.Text, diameter4.Text, diameter5.Text);
+            Methods.StoreValues(StaticModel.positielist, StaticModel.opdrachtnummer, positie1.Text, positie2.Text, positie3.Text, positie4.Text, positie5.Text);
+            Methods.StoreValues(StaticModel.beoordelinglist, StaticModel.opdrachtnummer, totaal1.Text, totaal2.Text, totaal3.Text, totaal4.Text, totaal5.Text);
+            Methods.StoreValues(StaticModel.typelist, StaticModel.opdrachtnummer, beschadiging1.Text, beschadiging2.Text, beschadiging3.Text, beschadiging4.Text, beschadiging5.Text);
+            Methods.StoreValues(StaticModel.typeroestlist, StaticModel.opdrachtnummer, roest1.Text, roest2.Text, roest3.Text, roest4.Text, roest5.Text);
+            Methods.StoreValues(StaticModel.kabelleverancierlist, StaticModel.opdrachtnummer, kabelleverancier1.Text);
+            Methods.StoreValues(StaticModel.waarnemingenlist, StaticModel.opdrachtnummer, waarnemingen1.Text);
+            Methods.StoreValues(StaticModel.bedrijfsurenelist, StaticModel.opdrachtnummer, bedrijfsuren1.Text);
+            Methods.StoreValues(StaticModel.redenenlist, StaticModel.opdrachtnummer, redenen1.Text);
+            Methods.StoreValues(StaticModel.datelist, StaticModel.opdrachtnummer, Convert.ToString(label3.Content));
+            Methods.StoreValues(StaticModel.imagepath, StaticModel.opdrachtnummer, Convert.ToString(filepath.Content));
 
 
-            opdrachtnummer = opdrachtnummer + 1;
-            nummer.Content = Convert.ToString(opdrachtnummer);
+            StaticModel.opdrachtnummer = StaticModel.opdrachtnummer + 1;
+            nummer.Content = Convert.ToString(StaticModel.opdrachtnummer);
 
-            if (maximumgecreerde < opdrachtnummer)
+            if (StaticModel.maximumgecreerde < StaticModel.opdrachtnummer)
             {
-                maximumgecreerde = opdrachtnummer;
+                StaticModel.maximumgecreerde = StaticModel.opdrachtnummer;
+
                 lenget6d1.Clear();
                 lenget6d2.Clear();
                 lenget6d3.Clear();
@@ -336,93 +296,81 @@ namespace Rhein_Kraan_Keuring
             }
             else
             {
-                    var lengte = lengte6dlist[opdrachtnummer];
-                    lenget6d1.Text = lengte[0];
-                    lenget6d2.Text = lengte[1];
-                    lenget6d3.Text = lengte[2];
-                    lenget6d4.Text = lengte[3];
-                    lenget6d5.Text = lengte[4];
+                Methods.AssignListInsideList(StaticModel.opdrachtnummer);
+                    lenget6d1.Text = ExtractedModel.lengte[0];
+                    lenget6d2.Text = ExtractedModel.lengte[1];
+                    lenget6d3.Text = ExtractedModel.lengte[2];
+                    lenget6d4.Text = ExtractedModel.lengte[3];
+                    lenget6d5.Text = ExtractedModel.lengte[4];
 
-                    var lengte30 = lengte30dlist[opdrachtnummer];
-                    lenget30d1.Text = lengte30[0];
-                lenget30d2.Text = lengte30[1];
-                lenget30d3.Text = lengte30[2];
-                lenget30d4.Text = lengte30[3];
-                lenget30d5.Text = lengte30[4];
+                    lenget30d1.Text = ExtractedModel.lengte30[0];
+                lenget30d2.Text = ExtractedModel.lengte30[1];
+                lenget30d3.Text = ExtractedModel.lengte30[2];
+                lenget30d4.Text = ExtractedModel.lengte30[3];
+                lenget30d5.Text = ExtractedModel.lengte30[4];
 
-                var idobj = IDlist[opdrachtnummer];
-                id1.Text = idobj[0];
-                id2.Text = idobj[1];
-                id3.Text = idobj[2];
-                id4.Text = idobj[3];
-                id5.Text = idobj[4];
+              
+                id1.Text = ExtractedModel.Id[0];
+                id2.Text = ExtractedModel.Id[1];
+                id3.Text = ExtractedModel.Id[2];
+                id4.Text = ExtractedModel.Id[3];
+                id5.Text = ExtractedModel.Id[4];
 
-                var afslijpingobj = afslijpinglist[opdrachtnummer];
-                afslijping1.Text = afslijpingobj[0];
-                afslijping2.Text = afslijpingobj[1];
-                afslijping3.Text = afslijpingobj[2];
-                afslijping4.Text = afslijpingobj[3];
-                afslijping5.Text = afslijpingobj[4];
+     
+                afslijping1.Text = ExtractedModel.afslijping[0];
+                afslijping2.Text = ExtractedModel.afslijping[1];
+                afslijping3.Text = ExtractedModel.afslijping[2];
+                afslijping4.Text = ExtractedModel.afslijping[3];
+                afslijping5.Text = ExtractedModel.afslijping[4];
 
-                var corossieobj = roestlist[opdrachtnummer];
-                corrosie1.Text = corossieobj[0];
-                corrosie2.Text = corossieobj[1];
-                corrosie3.Text = corossieobj[2];
-                corrosie4.Text = corossieobj[3];
-                corrosie5.Text = corossieobj[4];
+            
+                corrosie1.Text = ExtractedModel.roest[0];
+                corrosie2.Text = ExtractedModel.roest[1];
+                corrosie3.Text = ExtractedModel.roest[2];
+                corrosie4.Text = ExtractedModel.roest[3];
+                corrosie5.Text = ExtractedModel.roest[4];
 
-                var diameterobj = diameterlist[opdrachtnummer];
-                diameter1.Text = diameterobj[0];
-                diameter2.Text = diameterobj[1];
-                diameter3.Text = diameterobj[2];
-                diameter4.Text = diameterobj[3];
-                diameter5.Text = diameterobj[4];
+                diameter1.Text = ExtractedModel.diameter[0];
+                diameter2.Text = ExtractedModel.diameter[1];
+                diameter3.Text = ExtractedModel.diameter[2];
+                diameter4.Text = ExtractedModel.diameter[3];
+                diameter5.Text = ExtractedModel.diameter[4];
 
-                var positieobj = positielist[opdrachtnummer];
-                positie1.Text = positieobj[0];
-                positie2.Text = positieobj[1];
-                positie3.Text = positieobj[2];
-                positie4.Text = positieobj[3];
-                positie5.Text = positieobj[4];
+                positie1.Text = ExtractedModel.positie[0];
+                positie2.Text = ExtractedModel.positie[1];
+                positie3.Text = ExtractedModel.positie[2];
+                positie4.Text = ExtractedModel.positie[3];
+                positie5.Text = ExtractedModel.positie[4];
 
-                var totaalobj = beoordelinglist[opdrachtnummer];
-                totaal1.Text = totaalobj[0];
-                totaal2.Text = totaalobj[1];
-                totaal3.Text = totaalobj[2];
-                totaal4.Text = totaalobj[3];
-                totaal5.Text = totaalobj[4];
+                totaal1.Text = ExtractedModel.beoordeling[0];
+                totaal2.Text = ExtractedModel.beoordeling[1];
+                totaal3.Text = ExtractedModel.beoordeling[2];
+                totaal4.Text = ExtractedModel.beoordeling[3];
+                totaal5.Text = ExtractedModel.beoordeling[4];
 
-                var beschadigingobj = typelist[opdrachtnummer];
-                beschadiging1.Text = beschadigingobj[0];
-                beschadiging2.Text = beschadigingobj[1];
-                beschadiging3.Text = beschadigingobj[2];
-                beschadiging4.Text = beschadigingobj[3];
-                beschadiging5.Text = beschadigingobj[4];
+                beschadiging1.Text = ExtractedModel.type[0];
+                beschadiging2.Text = ExtractedModel.type[1];
+                beschadiging3.Text = ExtractedModel.type[2];
+                beschadiging4.Text = ExtractedModel.type[3];
+                beschadiging5.Text = ExtractedModel.type[4];
 
-                var roestobj = typeroestlist[opdrachtnummer];
-                roest1.Text = roestobj[0];
-                roest2.Text = roestobj[1];
-                roest3.Text = roestobj[2];
-                roest4.Text = roestobj[3];
-                roest5.Text = roestobj[4];
+                roest1.Text = ExtractedModel.typeroest[0];
+                roest2.Text = ExtractedModel.typeroest[1];
+                roest3.Text = ExtractedModel.typeroest[2];
+                roest4.Text = ExtractedModel.typeroest[3];
+                roest5.Text = ExtractedModel.typeroest[4];
 
-                var leverancierobj = kabelleverancierlist[opdrachtnummer];
-                kabelleverancier1.Text = leverancierobj[0];
+                kabelleverancier1.Text = ExtractedModel.leverancier[0];
 
-                var waarnemingenobj = waarnemingenlist[opdrachtnummer];
-                waarnemingen1.Text = waarnemingenobj[0];
+                waarnemingen1.Text = ExtractedModel.waarnemingen[0];
 
-                var urenobj = bedrijfsurenelist[opdrachtnummer];
-                bedrijfsuren1.Text = urenobj[0];
+                bedrijfsuren1.Text = ExtractedModel.uren[0];
 
-                var redenenobj = redenenlist[opdrachtnummer];
-                redenen1.Text = redenenobj[0];
+                redenen1.Text = ExtractedModel.reden[0];
 
-                var datumobj = datelist[opdrachtnummer];
-                label3.Content = datumobj[0];
+                label3.Content = ExtractedModel.datum[0];
 
-                var imageobj2 = imagepath[opdrachtnummer];
-                if (imageobj2 == "")
+                if (ExtractedModel.imageobj == "")
                 {
                     image1.Source = null;
                     filepath.Content = "";
@@ -431,10 +379,10 @@ namespace Rhein_Kraan_Keuring
                 {
                     BitmapImage src = new BitmapImage();
                     src.BeginInit();
-                    src.UriSource = new Uri(imageobj2, UriKind.Absolute);
+                    src.UriSource = new Uri(ExtractedModel.imageobj, UriKind.Absolute);
                     src.EndInit();
                     image1.Source = src;
-                    filepath.Content = imageobj2;
+                    filepath.Content = ExtractedModel.imageobj;
                 }
 
             }
@@ -445,20 +393,20 @@ namespace Rhein_Kraan_Keuring
 
         private void datum1_CalendarClosed(object sender, RoutedEventArgs e)
         {
-            string savedate;
+           
 
             try
             {
-                savedate = datum1.SelectedDate.Value.Date.ToShortDateString().ToString();
+                SaveDate.savedate = datum1.SelectedDate.Value.Date.ToShortDateString().ToString();
             }
 #pragma warning disable CS0168 // Variable is declared but never used
             catch (InvalidOperationException exception)
 #pragma warning restore CS0168 // Variable is declared but never used
             {
-                savedate = "";
+                SaveDate.savedate = "";
             }
 
-            label3.Content = savedate;
+            label3.Content = SaveDate.savedate;
         }
     }
 }

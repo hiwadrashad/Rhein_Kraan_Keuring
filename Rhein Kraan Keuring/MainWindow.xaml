@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rhein_Kraan_Keuring"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="logo.png">
+        Title="MainWindow" Height="450" Width="800" Icon="Images/logo.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="87*"/>
             <RowDefinition Height="130*"/>
         </Grid.RowDefinitions>
-        <Button HorizontalAlignment="Left" Margin="696,202,0,0" VerticalAlignment="Top" Height="27" Width="79" Click="Button_Click" Grid.Row="1">
-            <Button Content="Exit" Width="76" FontSize="14" FontWeight="Bold" RenderTransformOrigin="-1.329,0.679" Click="Button_Click_1"/>
+        <Button HorizontalAlignment="Left" Margin="696,202,0,0" VerticalAlignment="Top" Height="27" Width="79" Grid.Row="1">
+            <Button Content="Exit" Width="76" FontSize="14" FontWeight="Bold" RenderTransformOrigin="-1.329,0.679" Click="Exit_Applcation"/>
         </Button>
         <Label Content="opdrachtnummer: " HorizontalAlignment="Left" Margin="498,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.276,-0.095" FontSize="16" FontWeight="Bold" Height="31" Width="151"/>
         <Label x:Name="nummer" Content="0" HorizontalAlignment="Left" Margin="640,7,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Height="31" Width="40"/>
-        <Button HorizontalAlignment="Left" Margin="294,11,0,0" VerticalAlignment="Top" Height="27" Width="80" Click="Button_Click">
-            <Button Content="vorige" Width="78" FontSize="14" FontWeight="Bold" Click="Button_Click_4"/>
+        <Button HorizontalAlignment="Left" Margin="294,11,0,0" VerticalAlignment="Top" Height="27" Width="80">
+            <Button Content="vorige" Width="78" FontSize="14" FontWeight="Bold" Click="Previous_Clicked"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="379,11,0,0" VerticalAlignment="Top" Height="27" Width="79" Click="Button_Click">
-            <Button Content="volgende" Width="84" FontSize="14" FontWeight="Bold" Click="Button_Click_5"/>
+        <Button HorizontalAlignment="Left" Margin="379,11,0,0" VerticalAlignment="Top" Height="27" Width="79" >
+            <Button Content="volgende" Width="84" FontSize="14" FontWeight="Bold" Click="Next_Clicked"/>
         </Button>
         <TextBox x:Name="lenget6d1" HorizontalAlignment="Left" Margin="64,7,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="18" Grid.Row="1"/>
         <TextBox x:Name="lenget6d2" HorizontalAlignment="Left" Margin="64,31,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Grid.Row="1" Height="18"/>
@@ -102,7 +102,7 @@
         <Label Content="handtekening" HorizontalAlignment="Left" Margin="346,130,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="aantal bedrijfsuren" HorizontalAlignment="Left" Margin="346,157,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="redenen voor het afleggen" HorizontalAlignment="Left" Margin="346,182,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="upload" Content="upload" HorizontalAlignment="Left" Margin="439,136,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" Click="Button_Click_2"/>
+        <Button x:Name="upload" Content="upload" HorizontalAlignment="Left" Margin="439,136,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" Click="Upload_Image"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Height="71" Margin="627,122,0,0" Grid.Row="1" VerticalAlignment="Top" Width="151"/>
         <TextBox x:Name="bedrijfsuren1" HorizontalAlignment="Left" Margin="514,161,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.442,-1.501" Grid.Row="1" Height="18"/>
         <TextBox x:Name="redenen1" HorizontalAlignment="Left" Margin="514,186,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.442,-1.501" Grid.Row="1" Height="18"/>
